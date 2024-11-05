@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import HiraganaKeyboard from '../components/hiraganaKeyboard'
 
 export default function NextPage() {
   return (
@@ -20,6 +21,7 @@ export default function NextPage() {
           />
         </div>
         <span>⚡ Nextron ⚡</span>
+        <HiraganaKeyboard/>
       </div>
       <div className="mt-1 w-full flex-wrap flex justify-center">
         <Link href="/fin">Go to fin page</Link>
