@@ -22,6 +22,8 @@ if (isProd) {
     },
   })
 
+  mainWindow.setMenuBarVisibility(false)
+
   if (isProd) {
     await mainWindow.loadURL('app://./home')
   } else {
