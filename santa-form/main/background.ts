@@ -38,3 +38,12 @@ app.on('window-all-closed', () => {
 ipcMain.on('message', async (event, arg) => {
   event.reply('message', `${arg} World!`)
 })
+
+ipcMain.on("write-to-text-file", (event, content: string) => {
+  try {
+    // TODO: save a text file.
+    console.log("file saved!!!:", content)
+  } catch(error) {
+    console.error("failed to write text to a file:", error)
+  }
+})

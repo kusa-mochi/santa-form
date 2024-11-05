@@ -4,6 +4,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function HomePage() {
+  const saveFile = () => {
+    const content = "hoge-ta"
+    window.ipc.writeToTextFile(content)
+  }
   return (
     <React.Fragment>
       <Head>
@@ -29,6 +33,9 @@ export default function HomePage() {
       </div>
       <div className="mt-1 w-full flex-wrap flex justify-center">
         <Link href="/next">Go to next page</Link>
+      </div>
+      <div>
+        <button onClick={saveFile}>Save</button>
       </div>
     </React.Fragment>
   )

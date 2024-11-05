@@ -13,6 +13,9 @@ const handler = {
       ipcRenderer.removeListener(channel, subscription)
     }
   },
+  writeToTextFile(content: string) {
+    ipcRenderer.send("write-to-text-file", content)
+  },
 }
 
 contextBridge.exposeInMainWorld('ipc', handler)
