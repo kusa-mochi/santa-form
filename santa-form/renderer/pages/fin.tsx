@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function NextPage() {
+export default function FinPage() {
   return (
     <React.Fragment>
       <Head>
