@@ -20,9 +20,12 @@ if (isProd) {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
+    show: false,
   })
 
   mainWindow.setMenuBarVisibility(false)
+  mainWindow.maximize()
+  mainWindow.show()
 
   if (isProd) {
     await mainWindow.loadURL('app://./home')
