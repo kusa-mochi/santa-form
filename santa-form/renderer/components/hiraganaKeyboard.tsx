@@ -1,7 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import KeyboardButton from "./keyboardButton";
 
-export default function HiraganaKeyboard() {
+type Props = {
+    onClick: (keyLabel: string) => void
+}
+
+export default function HiraganaKeyboard(props: Props) {
     const charRows: string[][] = [
         ["1","2","3","4","5","6","7","8","9","0"],
         ["わ","ら","や","ま","は","な","た","さ","か","あ"],
@@ -31,7 +35,7 @@ export default function HiraganaKeyboard() {
                     return row.map((col, j) => {
                         return (
                             <div key={(numRow * i) + j}>
-                                <KeyboardButton label={col}/>
+                                <KeyboardButton onClick={props.onClick} label={col}/>
                             </div>
                         )
                     })
@@ -42,7 +46,7 @@ export default function HiraganaKeyboard() {
                     return row.map((col, j) => {
                         return (
                             <div key={(numRow * i) + j}>
-                                <KeyboardButton label={col}/>
+                                <KeyboardButton onClick={props.onClick} label={col}/>
                             </div>
                         )
                     })

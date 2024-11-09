@@ -5,6 +5,9 @@ import Image from 'next/image'
 import HiraganaKeyboard from '../components/hiraganaKeyboard'
 
 export default function NextPage() {
+  const onKeyInput = (k: string) => {
+    console.log(`typed:${k}`)
+  }
   return (
     <React.Fragment>
       <Head>
@@ -20,7 +23,7 @@ export default function NextPage() {
             height={256}
           />
         </div>
-        <HiraganaKeyboard/>
+        <HiraganaKeyboard onClick={onKeyInput}/>
         <Link href="/fin">Go to fin page</Link>
       </div>
     </React.Fragment>
