@@ -1,14 +1,13 @@
 type Props = {
-    key: string
-    width: number
-    height: number
+    // key: number
+    label: string
 }
 
 export default function KeyboardButton(props: Props) {
     return (
         <>
-            <div>
-                {props.key}
+            <div className="w-12 h-12 bg-gray-500">
+                {props.label}
             </div>
         </>
     )
