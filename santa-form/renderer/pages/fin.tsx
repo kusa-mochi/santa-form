@@ -7,7 +7,7 @@ export default function FinPage() {
   return (
     <React.Fragment>
       <Head>
-        <title>Fin - Nextron (with-tailwindcss)</title>
+        <title>さんたさんに　おねがいしよう！　🎅🦌🦌🦌🦌</title>
       </Head>
       <div className="grid grid-col-1 text-2xl w-full text-center">
         <div>
