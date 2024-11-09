@@ -19,7 +19,6 @@ export default function FinPage() {
             height={256}
           />
         </div>
-        <span>⚡ Nextron ⚡</span>
       </div>
       <div className="mt-1 w-full flex-wrap flex justify-center">
         <Link href="/home">Go to home page</Link>

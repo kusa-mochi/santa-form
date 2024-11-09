@@ -20,7 +20,6 @@ export default function NextPage() {
             height={256}
           />
         </div>
-        <span>⚡ Nextron ⚡</span>
         <HiraganaKeyboard/>
       </div>
       <div className="mt-1 w-full flex-wrap flex justify-center">
