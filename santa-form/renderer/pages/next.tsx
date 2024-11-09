@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import HiraganaKeyboard from '../components/hiraganaKeyboard'
 
 export default function NextPage() {
+  const [inputText, setInputText] = useState("")
   const onKeyInput = (k: string) => {
-    console.log(`typed:${k}`)
+    setInputText(`${inputText}${k}`)
   }
   return (
     <React.Fragment>
@@ -22,6 +23,14 @@ export default function NextPage() {
             width={256}
             height={256}
           />
+        </div>
+        <div>
+          <p>さんたさんに　おねがいしたい　ぷれぜんとを　かいてね！</p>
+        </div>
+        <div className='flex flex-row flex-wrap justify-center items-start content-center'>
+          {/* TODO: back spaceアイコンを設定する。 */}
+          <div>{inputText}</div>
+          <div><button>BS</button></div>
         </div>
         <HiraganaKeyboard onClick={onKeyInput}/>
         <Link href="/fin">Go to fin page</Link>
