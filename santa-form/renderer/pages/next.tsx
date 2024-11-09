@@ -10,7 +10,7 @@ export default function NextPage() {
       <Head>
         <title>さんたさんに　おねがいしよう！　🎅🦌🦌🦌🦌</title>
       </Head>
-      <div className="grid grid-col-1 text-2xl w-full text-center">
+      <div className="mt-1 w-full flex flex-col flex-nowrap justify-start items-center">
         <div>
           <Image
             className="ml-auto mr-auto mt-8"
@@ -21,8 +21,6 @@ export default function NextPage() {
           />
         </div>
         <HiraganaKeyboard/>
-      </div>
-      <div className="mt-1 w-full flex-wrap flex justify-center">
         <Link href="/fin">Go to fin page</Link>
       </div>
     </React.Fragment>
