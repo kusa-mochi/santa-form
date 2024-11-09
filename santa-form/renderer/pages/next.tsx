@@ -10,7 +10,7 @@ export default function NextPage() {
       <Head>
         <title>さんたさんに　おねがいしよう！　🎅🦌🦌🦌🦌</title>
       </Head>
-      <div className="mt-1 w-full flex flex-col flex-nowrap justify-start items-center">
+      <div className="w-full flex flex-col flex-nowrap justify-start items-center">
         <div>
           <Image
             className="ml-auto mr-auto mt-8"
