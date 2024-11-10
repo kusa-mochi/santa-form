@@ -33,7 +33,6 @@ export default function NextPage() {
           <p>さんたさんに　おねがいしたい　ぷれぜんとを　かいてね！</p>
         </div>
         <div className='flex flex-row flex-wrap justify-center items-center content-center w-full sm:w-full md:w-4/5 lg:w-2/3 xl:w-1/2 2xl:w-2/5'>
-          {/* TODO: back spaceアイコンを設定する。 */}
           <div className='bg-white text-gray-800 w-[calc(100%-100px)] h-8 flex flex-row flex-wrap justify-start items-center content-center'>
             {inputText}
           </div>
