@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import HiraganaKeyboard from '../components/hiraganaKeyboard'
+import MailContext from '../contexts/mailContext'
 
 export default function NextPage() {
+  const {setMailText} = useContext(MailContext)
   const [inputText, setInputText] = useState("")
   const onKeyInput = (k: string) => {
     setInputText(`${inputText}${k}`)
+  }
+  const onSend = () => {
+    setMailText(inputText)
   }
   return (
     <React.Fragment>
