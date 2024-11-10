@@ -4,10 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function HomePage() {
-  // const saveFile = () => {
-  //   const content = "hoge-ta"
-  //   window.ipc.writeToTextFile(content)
-  // }
   return (
     <React.Fragment>
       <Head>
@@ -29,9 +25,6 @@ export default function HomePage() {
           <button className='bg-gray-600'>さんたさんに　おねがいする</button>
         </Link>
       </div>
-      {/* <div>
-        <button onClick={saveFile}>Save</button>
-      </div> */}
     </React.Fragment>
   )
 }
