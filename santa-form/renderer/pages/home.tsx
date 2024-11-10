@@ -22,7 +22,7 @@ export default function HomePage() {
       </div>
       <div className="mt-1 w-full flex-wrap flex justify-center">
         <Link href="/next">
-          <button className='bg-gray-600'>さんたさんに　おねがいする</button>
+          <button className='bg-gray-500'>さんたさんに　おねがいする</button>
         </Link>
       </div>
     </React.Fragment>

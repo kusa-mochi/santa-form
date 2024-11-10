@@ -33,7 +33,9 @@ export default function NextPage() {
           <div><button>BS</button></div>
         </div>
         <HiraganaKeyboard onClick={onKeyInput}/>
-        <Link href="/fin">Go to fin page</Link>
+        <Link href="/fin">
+          <button className='bg-gray-500' onClick={onSend}>めーるを　おくる</button>
+        </Link>
       </div>
     </React.Fragment>
   )
