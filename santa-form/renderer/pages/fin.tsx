@@ -1,16 +1,43 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { setTimeout } from 'timers'
+import MailContext from '../contexts/mailContext'
 
 export default function FinPage() {
   // プログレスバーの進捗
   const [progress, setProgress] = useState(0)
   // 進捗メッセージ
-  const [progressMessage, setProgressMessage] = useState("")
-  // 指定した時間が経過するまで待機する関数
-  const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms))
+  const [progressMessage, setProgressMessage] = useState("さんたさんに　おてがみを　おくっているよ！")
+
+  // メール文面
+  const {mailText} = useContext(MailContext)
+
+  const saveFile = () => {
+    window.ipc.writeToTextFile(mailText)
+  }
+
+  // 画面描画時にプログレスバーとメッセージを更新する処理。
+  useEffect(() => {
+    setTimeout(() => {
+      setProgress(10)
+      setProgressMessage("うぇうぇうぇーい")
+    }, 1000)
+
+    setTimeout(() => {
+      setProgress(20)
+      setProgressMessage("うぇーい")
+    }, 2000)
+
+    setTimeout(() => {
+      setProgress(30)
+      setProgressMessage("ほげーーい")
+    }, 3000)
+
+    // ファイルを保存する。
+    saveFile()
+  }, [])
 
   return (
     <React.Fragment>
