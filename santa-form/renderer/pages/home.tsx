@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import Button from '../components/button'
 
 export default function HomePage() {
   return (
@@ -22,7 +23,7 @@ export default function HomePage() {
       </div>
       <div className="mt-1 w-full flex-wrap flex justify-center">
         <Link href="/next">
-          <button className='bg-gray-500'>さんたさんに　おねがいする</button>
+          <Button>さんたさんに　おねがいする</Button>
         </Link>
       </div>
     </React.Fragment>
