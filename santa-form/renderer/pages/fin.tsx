@@ -23,6 +23,7 @@ export default function FinPage() {
     "w-[70%]",
     "w-[90%]",
     "w-[100%]",
+    "w-[100%]",
   ]
   // 進捗メッセージ
   const [progressMessage, setProgressMessage] = useState("さんたさんに　おてがみを　おくっているよ！")
@@ -37,7 +38,8 @@ export default function FinPage() {
     "がんばれ　がんばれ！",
     "がんばれ　がんばれ！",
     "がんばれ　がんばれ！",
-    "おくったよ！　ぷれぜんとを　たのしみに　していてね🎅",
+    "がんばれ　がんばれ！",
+    "おてがみが　とどいたよ！　ぷれぜんとを　たのしみに　していてね🎅",
   ]
 
   // メール文面
@@ -49,7 +51,7 @@ export default function FinPage() {
 
   // 画面描画時にプログレスバーとメッセージを更新する処理。
   useEffect(() => {
-    for (let prog: number = 0; prog < 10; prog++) {
+    for (let prog: number = 0; prog < 11; prog++) {
       setTimeout(() => {
         setProgress((prog+1) * 10)
         setProgressClass(progressClassList[prog + 1])
@@ -77,8 +79,8 @@ export default function FinPage() {
           />
         </div>
         <div className='text-white text-4xl mt-12 mb-8'>{progressMessage}</div>
-        <div className='w-full sm:w-full md:w-9/10 lg:w-4/5 xl:w-2/3 2xl:w-1/2 h-8 bg-gray-700 flex flex-row flex-nowrap justify-start items-stretch'>
-          <div className={`bg-gray-100 transition-all ease-out duration-1000 ${progressClass}`}></div>
+        <div className='w-full sm:w-full md:w-9/10 lg:w-4/5 xl:w-2/3 2xl:w-1/2 h-8 bg-gray-700 flex flex-row flex-nowrap justify-start items-stretch rounded-full'>
+          <div className={`bg-gray-100 transition-all ease-out duration-[2000ms] h-full rounded-full ${progressClass}`}></div>
         </div>
       </div>
     </React.Fragment>
