@@ -79,7 +79,7 @@ export default function FinPage() {
         <div className='text-white text-4xl mt-12 mb-8'>{progressMessage}</div>
         {/* <progress id="sending-progress" max="100" value={progress}></progress> */}
         <div className='w-full sm:w-full md:w-9/10 lg:w-4/5 xl:w-2/3 2xl:w-1/2 h-8 bg-gray-700 flex flex-row flex-nowrap justify-start items-stretch'>
-          <div className={`bg-gray-100 ${progressClass}`}></div>
+          <div className={`bg-gray-100 transition-all ease-out duration-1000 ${progressClass}`}></div>
         </div>
       </div>
     </React.Fragment>
