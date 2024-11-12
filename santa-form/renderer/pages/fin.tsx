@@ -54,7 +54,7 @@ export default function FinPage() {
         setProgress((prog+1) * 10)
         setProgressClass(progressClassList[prog + 1])
         setProgressMessage(messages[prog])
-      }, (prog+1) * 1000)
+      }, (prog+1) * 2000)
     }
 
     // ファイルを保存する。
