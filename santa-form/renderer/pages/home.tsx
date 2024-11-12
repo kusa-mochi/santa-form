@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <React.Fragment>
       <Head>
-        <title>さんたさんに　おねがいしよう！　🎅🦌🦌🦌🦌</title>
+        <title>さんたの　さいと　🎅🦌🦌🦌🦌</title>
       </Head>
       <div className="grid grid-col-1 text-2xl w-full text-center">
         <div>

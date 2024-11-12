@@ -17,7 +17,7 @@ export default function NextPage() {
   return (
     <React.Fragment>
       <Head>
-        <title>さんたさんに　おねがいしよう！　🎅🦌🦌🦌🦌</title>
+        <title>さんたの　さいと　🎅🦌🦌🦌🦌</title>
       </Head>
       <div className="w-full flex flex-col flex-nowrap justify-start items-center">
         <div>
