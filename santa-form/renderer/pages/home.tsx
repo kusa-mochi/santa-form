@@ -21,10 +21,10 @@ export default function HomePage() {
           />
         </div>
         <div className='text-white text-4xl'>
-          <p className='mt-12 mb-3'>わたしは　さんただよ🎅</p>
-          <p className='mb-3'>ようこそ　わたしの　さいとへ。</p>
-          <p className='mb-3'>「すすむ」ぼたんを　おして</p>
-          <p className='mb-8'>きみが　ほしいものを　おしえてね。</p>
+          <p className='mt-12 mb-3 animate-text-focus-in'>わたしは　さんただよ🎅</p>
+          <p className='mb-3 animate-text-focus-in'>ようこそ　わたしの　さいとへ。</p>
+          <p className='mb-3 animate-text-focus-in'>「すすむ」ぼたんを　おして</p>
+          <p className='mb-8 animate-text-focus-in'>きみが　ほしいものを　おしえてね。</p>
         </div>
       </div>
       <div className="mt-1 w-full flex-wrap flex justify-center">
