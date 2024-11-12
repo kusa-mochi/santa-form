@@ -20,6 +20,12 @@ export default function HomePage() {
             height={256}
           />
         </div>
+        <div className='text-white text-4xl'>
+          <p className='mt-12 mb-3'>わたしは　さんただよ🎅</p>
+          <p className='mb-3'>ようこそ　わたしの　さいとへ。</p>
+          <p className='mb-3'>「すすむ」ぼたんを　おして</p>
+          <p className='mb-8'>きみが　ほしいものを　おしえてね。</p>
+        </div>
       </div>
       <div className="mt-1 w-full flex-wrap flex justify-center">
         <Link href="/next">

@@ -31,8 +31,7 @@ export default function NextPage() {
           />
         </div>
         <div className='text-white text-4xl'>
-          <p className='mt-12 mb-3'>ようこそ　わたしの　さいとへ🎅</p>
-          <p className='mb-3'>きみが　ほしいものは　なにかな？</p>
+          <p className='mt-12 mb-3'>きみが　ほしいものは　なにかな？</p>
           <p className='mb-8'>ひらがなで　かいて、「すすむ」ぼたんを　おしてね！</p>
         </div>
         <div className='flex flex-row flex-wrap justify-center items-center content-center w-full sm:w-full md:w-9/10 lg:w-4/5 xl:w-2/3 2xl:w-1/2'>
