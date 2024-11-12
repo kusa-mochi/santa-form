@@ -18,6 +18,9 @@ export default function NextPage() {
   const onSend = () => {
     setMailText(inputText)
   }
+  const openConfirmDialog = () => {
+
+  }
   return (
     <React.Fragment>
       <Head>
@@ -53,9 +56,24 @@ export default function NextPage() {
           </div>
         </div>
         <HiraganaKeyboard onClick={onKeyInput}/>
-        <Link href="/fin">
+        {/* <Link href="/fin"> */}
+        <div onClick={openConfirmDialog}>
           <Image src="/images/navigation_go.png" alt='これを　おすと　わたしに　めーるを　おくるよ' width={150} height={90} onClick={onSend} />
-        </Link>
+        </div>
+        {/* </Link> */}
+        <div className=''>
+          <div className=''>
+            <p className='text-4xl mb-3'>きみが　ほしいものは</p>
+            <p className='text-5xl font-bold mb-3'>{inputText}</p>
+            <p className='text-4xl'>かな？</p>
+            <div>
+              <Link href="/fin">
+                <Button>はい</Button>
+              </Link>
+              <Button>いいえ</Button>
+            </div>
+          </div>
+        </div>
       </div>
     </React.Fragment>
   )
