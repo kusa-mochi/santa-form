@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import HiraganaKeyboard from '../components/hiraganaKeyboard'
 import MailContext from '../contexts/mailContext'
+import Button from '../components/button'
 
 export default function NextPage() {
   const {setMailText} = useContext(MailContext)
@@ -29,11 +30,13 @@ export default function NextPage() {
             height={256}
           />
         </div>
-        <div>
-          <p>さんたさんに　おねがいしたい　ぷれぜんとを　かいてね！</p>
+        <div className='text-white text-4xl'>
+          <p className='mt-12 mb-3'>ようこそ　わたしの　さいとへ🎅</p>
+          <p className='mb-3'>きみが　ほしいものは　なにかな？</p>
+          <p className='mb-8'>ひらがなで　かいて、「すすむ」ぼたんを　おしてね！</p>
         </div>
-        <div className='flex flex-row flex-wrap justify-center items-center content-center w-full sm:w-full md:w-4/5 lg:w-2/3 xl:w-1/2 2xl:w-2/5'>
-          <div className='bg-white text-gray-800 w-[calc(100%-100px)] h-8 flex flex-row flex-wrap justify-start items-center content-center'>
+        <div className='flex flex-row flex-wrap justify-center items-center content-center w-full sm:w-full md:w-9/10 lg:w-4/5 xl:w-2/3 2xl:w-1/2'>
+          <div className='bg-white text-gray-800 w-[calc(100%-100px)] h-14 text-4xl flex flex-row flex-wrap justify-start items-center content-center mb-8'>
             {inputText}
           </div>
           <div className='flex flex-row flex-wrap justify-center items-center content-center ml-1'>
@@ -49,7 +52,7 @@ export default function NextPage() {
         </div>
         <HiraganaKeyboard onClick={onKeyInput}/>
         <Link href="/fin">
-          <button className='bg-gray-500' onClick={onSend}>めーるを　おくる</button>
+          <Image src="/images/navigation_go.png" alt='これを　おすと　わたしに　めーるを　おくるよ' width={150} height={90} onClick={onSend} />
         </Link>
       </div>
     </React.Fragment>

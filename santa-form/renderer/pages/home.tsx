@@ -23,7 +23,7 @@ export default function HomePage() {
       </div>
       <div className="mt-1 w-full flex-wrap flex justify-center">
         <Link href="/next">
-          <Button>さんたさんに　おねがいする</Button>
+          <Image src="/images/navigation_go.png" alt='これを　おすと　さいとを　ひらくよ' width={150} height={90} />
         </Link>
       </div>
     </React.Fragment>
