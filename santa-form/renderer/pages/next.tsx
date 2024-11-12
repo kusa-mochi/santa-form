@@ -9,6 +9,9 @@ import Button from '../components/button'
 export default function NextPage() {
   const {setMailText} = useContext(MailContext)
   const [inputText, setInputText] = useState("")
+  const onBackspace = () => {
+    setInputText(inputText.slice(0, -1))
+  }
   const onKeyInput = (k: string) => {
     setInputText(`${inputText}${k}`)
   }
@@ -39,7 +42,7 @@ export default function NextPage() {
             {inputText}
           </div>
           <div className='flex flex-row flex-wrap justify-center items-center content-center ml-1'>
-            <button>
+            <button onClick={onBackspace}>
               <Image
                 src="/images/backspace.png"
                 alt="もじを１つけすよ"
