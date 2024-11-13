@@ -71,7 +71,7 @@ export default function FinPage() {
       <div className="w-full flex flex-col flex-nowrap justify-start items-center">
         <div>
           <Image
-            className="ml-auto mr-auto mt-8"
+            className="ml-auto mr-auto mt-8 animate-vibrate"
             src="/images/christmas_santa_sori.png"
             alt="Logo image"
             width={256}
