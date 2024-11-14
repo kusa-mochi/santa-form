@@ -8,6 +8,8 @@ import MailContext from '../contexts/mailContext'
 export default function FinPage() {
   // プログレスバーの進捗
   const [progress, setProgress] = useState(0)
+  // 進捗に応じてサンタ画像に適用するアニメーションクラス
+  const [santaAnimation, setSantaAnimation] = useState("")
   // 進捗を表すDOM要素に付するCSSクラス
   const [progressClass, setProgressClass] = useState("w-[0%]")
   // 進捗を表すDOM要素に付するCSSクラス名のリスト
@@ -56,6 +58,12 @@ export default function FinPage() {
         setProgress((prog+1) * 10)
         setProgressClass(progressClassList[prog + 1])
         setProgressMessage(messages[prog])
+        if (prog === 3) {
+          setSantaAnimation("animate-vibrate")
+        }
+        if (prog === 6) {
+          setSantaAnimation("animate-gogo")
+        }
       }, (prog+1) * 2000)
     }
 
@@ -71,7 +79,7 @@ export default function FinPage() {
       <div className="w-full flex flex-col flex-nowrap justify-start items-center">
         <div>
           <Image
-            className="ml-auto mr-auto mt-8 animate-go-go-santa"
+            className={`ml-auto mr-auto mt-8 transform scale-x-[-1] ${santaAnimation}`}
             src="/images/christmas_santa_sori.png"
             alt="Logo image"
             width={256}
