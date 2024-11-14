@@ -77,9 +77,9 @@ export default function FinPage() {
         <title>さんたの　さいと　🎅🦌🦌🦌🦌</title>
       </Head>
       <div className="w-full flex flex-col flex-nowrap justify-start items-center">
-        <div>
+        <div className='w-2/3'>
           <Image
-            className={`ml-auto mr-auto mt-8 transform scale-x-[-1] ${santaAnimation}`}
+            className={`ml-auto mr-auto mt-8 transform scale-x-[-1] animate-vibrate`}
             src="/images/christmas_santa_sori.png"
             alt="Logo image"
             width={256}

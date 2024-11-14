@@ -16,8 +16,7 @@ module.exports = {
     extend: {
       animation: {
         "text-focus-in": "text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both",
-        "vibrate": "vibrate .4s ease 0s 15",  // keyframe-name | duration | easing-function | delay | iteration-count
-        "gogo": "gogo .2s ease 0s 40",  // keyframe-name | duration | easing-function | delay | iteration-count
+        "vibrate": "vibrate .4s ease 8s 15, gogo .2s ease 14s 40, santamove 22s linear 0s 1 forwards",  // keyframe-name | duration | easing-function | delay | iteration-count
       },
       keyframes: {
         "text-focus-in": {
@@ -63,6 +62,20 @@ module.exports = {
           "100%": {
             transform: "translate(0px, 0px) rotateZ(0deg) scale(-1, 1)",
           },
+        },
+        "santamove": {
+          "0%": {
+            margin: "0 0 0 5%",
+          },
+          "36.364%": {
+            margin: "0 0 0 40%",
+          },
+          "63.636%": {
+            margin: "0 0 0 20%",
+          },
+          "100%": {
+            margin: "0 0 0 80%",
+          }
         },
       }
     },
