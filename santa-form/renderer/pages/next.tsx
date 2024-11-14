@@ -21,7 +21,7 @@ export default function NextPage() {
     setMailText(inputText)
   }
   const openConfirmDialog = () => {
-    setConfirmDialogDisplay("flex")
+    setConfirmDialogDisplay("block")
   }
   const closeConfirmDialog = () => {
     setConfirmDialogDisplay("hidden")
@@ -66,10 +66,7 @@ export default function NextPage() {
         </div>
         {/* 確認ダイアログ */}
         <div className={`absolute top-0 left-0 w-full h-full ${confirmDialogDisplay}`}>
-          <div className='relative w-full h-full bg-neutral-950 opacity-70'>
-            {/* モーダルのバックドロップ */}
-          </div>
-          <div className='absolute top-0 left-0 w-full h-full'>
+          <div className='relative bg-black bg-opacity-80 w-full h-full'>
             <div className='w-full h-full flex flex-col flex-nowrap justify-center items-center text-white'>
               <p className='text-4xl mb-3'>きみが　ほしいものは</p>
               <p className='text-5xl font-bold mb-3'>{inputText}</p>
