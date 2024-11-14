@@ -7,8 +7,10 @@ import MailContext from '../contexts/mailContext'
 import Button from '../components/button'
 
 export default function NextPage() {
-  const {setMailText} = useContext(MailContext)
+  const { setMailText } = useContext(MailContext)
   const [inputText, setInputText] = useState("")
+  const [confirmDialogDisplay, setConfirmDialogDisplay] = useState("hidden")
+
   const onBackspace = () => {
     setInputText(inputText.slice(0, -1))
   }
@@ -19,7 +21,10 @@ export default function NextPage() {
     setMailText(inputText)
   }
   const openConfirmDialog = () => {
-
+    setConfirmDialogDisplay("flex")
+  }
+  const closeConfirmDialog = () => {
+    setConfirmDialogDisplay("hidden")
   }
   return (
     <React.Fragment>
@@ -55,22 +60,26 @@ export default function NextPage() {
             </button>
           </div>
         </div>
-        <HiraganaKeyboard onClick={onKeyInput}/>
-        {/* <Link href="/fin"> */}
+        <HiraganaKeyboard onClick={onKeyInput} />
         <div onClick={openConfirmDialog}>
           <Image src="/images/navigation_go.png" alt='これを　おすと　わたしに　めーるを　おくるよ' width={150} height={90} onClick={onSend} />
         </div>
-        {/* </Link> */}
-        <div className=''>
-          <div className=''>
-            <p className='text-4xl mb-3'>きみが　ほしいものは</p>
-            <p className='text-5xl font-bold mb-3'>{inputText}</p>
-            <p className='text-4xl'>かな？</p>
-            <div>
-              <Link href="/fin">
-                <Button>はい</Button>
-              </Link>
-              <Button>いいえ</Button>
+        {/* 確認ダイアログ */}
+        <div className={`absolute top-0 left-0 w-full h-full ${confirmDialogDisplay}`}>
+          <div className='relative w-full h-full bg-neutral-950 opacity-70'>
+            {/* モーダルのバックドロップ */}
+          </div>
+          <div className='absolute top-0 left-0 w-full h-full'>
+            <div className='w-full h-full flex flex-col flex-nowrap justify-center items-center text-white'>
+              <p className='text-4xl mb-3'>きみが　ほしいものは</p>
+              <p className='text-5xl font-bold mb-3'>{inputText}</p>
+              <p className='text-4xl'>かな？</p>
+              <div>
+                <Link href="/fin">
+                  <Button>はい</Button>
+                </Link>
+                <Button onClick={closeConfirmDialog}>いいえ</Button>
+              </div>
             </div>
           </div>
         </div>
