@@ -16,7 +16,7 @@ module.exports = {
     extend: {
       animation: {
         "text-focus-in": "text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both",
-        "vibrate": "vibrate .1s ease 8s 60, running .5s linear 0s 6",  // keyframe-name | duration | easing-function | delay | iteration-count
+        "go-go-santa": "vibrate .1s ease 8s 60, running .5s linear 0s 6",  // keyframe-name | duration | easing-function | delay | iteration-count
         // "running": "running .5s linear 14s 6" // keyframe-name | duration | easing-function | delay | iteration-count
       },
       keyframes: {
