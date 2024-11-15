@@ -15,7 +15,7 @@ export default function HomePage() {
           <Image
             className="ml-auto mr-auto mt-8"
             src="/images/christmas_santa_sori.png"
-            alt="Logo image"
+            alt="わたしだよ"
             width={256}
             height={256}
           />

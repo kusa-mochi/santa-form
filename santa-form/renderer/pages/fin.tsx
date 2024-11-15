@@ -61,9 +61,6 @@ export default function FinPage() {
         if (prog === 3) {
           setSantaAnimation("animate-vibrate")
         }
-        if (prog === 6) {
-          setSantaAnimation("animate-gogo")
-        }
       }, (prog+1) * 2000)
     }
 
@@ -77,11 +74,20 @@ export default function FinPage() {
         <title>さんたの　さいと　🎅🦌🦌🦌🦌</title>
       </Head>
       <div className="w-full flex flex-col flex-nowrap justify-start items-center">
-        <div className='w-2/3'>
+        <div className='w-2/3 mt-20 z-20'>
           <Image
-            className={`ml-auto mr-auto mt-8 transform scale-x-[-1] animate-vibrate`}
+            className="ml-auto mr-auto mt-8 transform scale-x-[-1] animate-vibrate"
             src="/images/christmas_santa_sori.png"
-            alt="Logo image"
+            alt="わたしだよ"
+            width={256}
+            height={256}
+          />
+        </div>
+        <div>
+          <Image
+            className='absolute top-[11px] left-[80%] z-10'
+            src="/images/snow_house.png"
+            alt="さんたさんの　おうち"
             width={256}
             height={256}
           />

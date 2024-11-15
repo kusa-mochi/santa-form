@@ -65,13 +65,13 @@ module.exports = {
         },
         "santamove": {
           "0%": {
-            margin: "0 0 0 5%",
+            margin: "0 0 0 0%",
           },
           "36.364%": {
             margin: "0 0 0 40%",
           },
           "63.636%": {
-            margin: "0 0 0 20%",
+            margin: "0 0 0 10%",
           },
           "100%": {
             margin: "0 0 0 80%",
