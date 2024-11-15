@@ -48,6 +48,9 @@ export default function FinPage() {
   const [roll3, setRoll3] = useState("animate-roll3")
   const [roll4, setRoll4] = useState("animate-roll4")
 
+  // 終了メッセージクラス
+  const [ending, setEnding] = useState("hidden")
+
   // メール文面
   const {mailText} = useContext(MailContext)
 
@@ -70,6 +73,9 @@ export default function FinPage() {
           setRoll4("animate-fubuki4")
         }
       }, (prog+1) * 2000)
+      setTimeout(() => {
+        setEnding("animate-text-focus-in")
+      }, 13 * 2000);
     }
 
     // ファイルを保存する。
@@ -102,6 +108,10 @@ export default function FinPage() {
         <div className='text-white text-4xl mt-12 mb-8 animate-text-focus-in'>{progressMessage}</div>
         <div className='w-full sm:w-full md:w-9/10 lg:w-4/5 xl:w-2/3 2xl:w-1/2 h-8 bg-gray-700 flex flex-row flex-nowrap justify-start items-stretch rounded-full'>
           <div className={`bg-gray-100 transition-all ease-linear duration-[2000ms] h-full rounded-full ${progressClass}`}></div>
+        </div>
+        <div className='text-white text-4xl text-center'>
+          <p className={`mt-16 mb-3 ${ending}`}>このさいとは　もう　とじてもらって　だいじょうぶだよ</p>
+          <p className={`${ending}`}>それでは　また　くりすますに！</p>
         </div>
         <div className='absolute w-full h-full top-0 left-0 pointer-events-none'>
           <div className={`${roll1} text-[#fffafa] text-[14px] fixed top-[-5%] [text-shadow:_77vw_-571px_1px,_100vw_-615px_6px,_59vw_-327px_9px,_91vw_-323px_6px,_47vw_-237px_7px,_71vw_-726px_2px,_41vw_-869px_3px,_10vw_-905px_0px,_65vw_-644px_8px,_19vw_-472px_2px,_50vw_-586px_5px,_60vw_-245px_5px,_67vw_-716px_1px,_38vw_-666px_2px,_57vw_-484px_3px,_42vw_-105px_9px,_10vw_-597px_9px,_43vw_-740px_5px,_49vw_-523px_9px,_39vw_-619px_6px,_4vw_-88px_5px,_39vw_-399px_1px,_49vw_-43px_3px,_47vw_-529px_1px,_34vw_-324px_8px,_2vw_-699px_4px,_58vw_-112px_7px,_17vw_-159px_0px,_15vw_-513px_6px,_63vw_-203px_2px,_4vw_-999px_0px,_45vw_-128px_8px,_2vw_-104px_1px,_53vw_-439px_1px,_25vw_-751px_3px,_23vw_-692px_9px,_18vw_-18px_5px,_55vw_-293px_7px,_67vw_-813px_1px,_94vw_-847px_5px,_57vw_-485px_3px,_90vw_-337px_9px,_48vw_-743px_4px,_57vw_-23px_4px,_79vw_-567px_8px,_0vw_-339px_9px,_27vw_-322px_4px,_30vw_-270px_7px,_64vw_-688px_9px,_57vw_-378px_5px,_5vw_-785px_10px,_41vw_-336px_4px,_55vw_-344px_7px,_70vw_-26px_3px,_35vw_-480px_1px,_49vw_-920px_3px,_28vw_-720px_3px,_83vw_-61px_2px,_96vw_-984px_5px,_71vw_-693px_7px,_6vw_-76px_5px,_85vw_-45px_5px,_2vw_-597px_5px,_79vw_-394px_1px,_67vw_-678px_9px,_73vw_-873px_5px,_11vw_-176px_9px,_90vw_-408px_7px,_30vw_-475px_7px,_96vw_-120px_8px,_45vw_-483px_1px,_45vw_-756px_3px,_48vw_-923px_6px,_18vw_-580px_6px,_65vw_-555px_4px,_30vw_-373px_6px,_92vw_-148px_1px,_17vw_-926px_0px,_6vw_-141px_8px,_3vw_-857px_5px,_26vw_-106px_4px,_6vw_-807px_10px,_68vw_-900px_0px,_81vw_-620px_9px,_25vw_-531px_5px,_46vw_-24px_4px,_38vw_-899px_2px,_93vw_-529px_7px,_30vw_-229px_7px,_50vw_-663px_9px,_10vw_-903px_3px,_91vw_-669px_2px,_53vw_-703px_9px,_58vw_-165px_2px,_46vw_-127px_1px,_62vw_-799px_1px,_92vw_-223px_7px,_67vw_-384px_9px,_85vw_-371px_0px,_6vw_-480px_1px]`}>●</div>
