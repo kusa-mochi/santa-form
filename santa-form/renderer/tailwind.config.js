@@ -12,11 +12,13 @@ module.exports = {
       black: colors.black,
       gray: colors.gray,
       blue: colors.blue,
+      emerald: colors.emerald,
     },
     extend: {
       animation: {
         "text-focus-in": "text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both",
         "vibrate": "vibrate .4s ease 8s 15, gogo .2s ease 14s 40, santamove 22s linear 0s 1 forwards",  // keyframe-name | duration | easing-function | delay | iteration-count
+        "modal-fade-in": "modal-fade-in .5s ease 0s 1",
       },
       keyframes: {
         "text-focus-in": {
@@ -77,6 +79,14 @@ module.exports = {
             margin: "0 0 0 80%",
           }
         },
+        "modal-fade-in": {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          }
+        }
       }
     },
   },
