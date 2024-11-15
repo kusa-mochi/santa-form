@@ -43,6 +43,11 @@ export default function FinPage() {
     "がんばれ　がんばれ！",
     "おてがみが　とどいたよ！　ぷれぜんとを　たのしみに　していてね🎅",
   ]
+  // 雪アニメーションクラス
+  const [roll1, setRoll1] = useState("animate-roll")
+  const [roll2, setRoll2] = useState("animate-roll2")
+  const [roll3, setRoll3] = useState("animate-roll3")
+  const [roll4, setRoll4] = useState("animate-roll4")
 
   // メール文面
   const {mailText} = useContext(MailContext)
@@ -60,6 +65,10 @@ export default function FinPage() {
         setProgressMessage(messages[prog])
         if (prog === 3) {
           setSantaAnimation("animate-vibrate")
+          setRoll1("animate-fubuki1")
+          setRoll2("animate-fubuki2")
+          setRoll3("animate-fubuki3")
+          setRoll4("animate-fubuki4")
         }
       }, (prog+1) * 2000)
     }
@@ -96,10 +105,10 @@ export default function FinPage() {
           <div className={`bg-gray-100 transition-all ease-out duration-[2000ms] h-full rounded-full ${progressClass}`}></div>
         </div>
         <div className='absolute w-full h-full top-0 left-0 pointer-events-none'>
-          <div className='text-[#fffafa] text-[10px] fixed top-[-5%] animate-roll [text-shadow:_5vw_-100px_2px,_10vw_-400px_3px,_20vw_-500px_4px,_30vw_-580px_1px,_39vw_-250px_2px,_42vw_-340px_5px,_56vw_-150px_2px,_63vw_-180px_0px,78vw_-220px_4px,_86vw_-320px_9px,_94vw_-170px_7px]'>●</div>
-          <div className='text-[#fffafa] text-[10px] fixed top-[-5%] animate-roll2 [text-shadow:_15vw_-100px_2px,_20vw_-400px_3px,_30vw_-500px_4px,_40vw_-580px_1px,_49vw_-250px_2px,_52vw_-340px_5px,_66vw_-150px_2px,_73vw_-180px_0px,88vw_-220px_4px,_96vw_-320px_9px,_4vw_-170px_7px]'>●</div>
-          <div className='text-[#fffafa] text-[10px] fixed top-[-5%] animate-roll3 [text-shadow:_25vw_-100px_2px,_30vw_-400px_3px,_40vw_-500px_4px,_50vw_-580px_1px,_59vw_-250px_2px,_62vw_-340px_5px,_76vw_-150px_2px,_83vw_-180px_0px,98vw_-220px_4px,_6vw_-320px_9px,_14vw_-170px_7px]'>●</div>
-          <div className='text-[#fffafa] text-[10px] fixed top-[-5%] animate-roll4 [text-shadow:_35vw_-100px_2px,_40vw_-400px_3px,_50vw_-500px_4px,_60vw_-580px_1px,_69vw_-250px_2px,_72vw_-340px_5px,_86vw_-150px_2px,_93vw_-180px_0px,8vw_-220px_4px,_16vw_-320px_9px,_24vw_-170px_7px]'>●</div>
+          <div className={`${roll1} text-[#fffafa] text-[14px] fixed top-[-5%] [text-shadow:_5vw_-100px_2px,_10vw_-400px_3px,_20vw_-500px_4px,_30vw_-580px_1px,_39vw_-250px_2px,_42vw_-340px_5px,_56vw_-150px_2px,_63vw_-180px_0px,78vw_-220px_4px,_86vw_-320px_9px,_94vw_-170px_7px]`}>●</div>
+          <div className={`${roll2} text-[#fffafa] text-[14px] fixed top-[-5%] [text-shadow:_15vw_-100px_2px,_20vw_-400px_3px,_30vw_-500px_4px,_40vw_-580px_1px,_49vw_-250px_2px,_52vw_-340px_5px,_66vw_-150px_2px,_73vw_-180px_0px,88vw_-220px_4px,_96vw_-320px_9px,_4vw_-170px_7px]`}>●</div>
+          <div className={`${roll3} text-[#fffafa] text-[14px] fixed top-[-5%] [text-shadow:_25vw_-100px_2px,_30vw_-400px_3px,_40vw_-500px_4px,_50vw_-580px_1px,_59vw_-250px_2px,_62vw_-340px_5px,_76vw_-150px_2px,_83vw_-180px_0px,98vw_-220px_4px,_6vw_-320px_9px,_14vw_-170px_7px]`}>●</div>
+          <div className={`${roll4} text-[#fffafa] text-[14px] fixed top-[-5%] [text-shadow:_35vw_-100px_2px,_40vw_-400px_3px,_50vw_-500px_4px,_60vw_-580px_1px,_69vw_-250px_2px,_72vw_-340px_5px,_86vw_-150px_2px,_93vw_-180px_0px,8vw_-220px_4px,_16vw_-320px_9px,_24vw_-170px_7px]`}>●</div>
         </div>
       </div>
     </React.Fragment>

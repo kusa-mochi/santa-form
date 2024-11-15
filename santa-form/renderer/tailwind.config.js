@@ -23,6 +23,10 @@ module.exports = {
         "roll2": "roll 5s linear 2s infinite",
         "roll3": "roll 5s linear 4s infinite",
         "roll4": "roll 5s linear 6s infinite",
+        "fubuki": "fubuki 1s linear infinite",
+        "fubuki2": "fubuki 1s linear 0.3s infinite",
+        "fubuki3": "fubuki 1s linear 0.6s infinite",
+        "fubuki4": "fubuki 1s linear 1s infinite",
       },
       keyframes: {
         "text-focus-in": {
@@ -103,6 +107,19 @@ module.exports = {
             top: "100%",
             opacity: "0",
           }
+        },
+        "fubuki": {
+          "0%": {
+            transform: "rotate(0deg) translate(0px, 800px)",
+          },
+          "90%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "rotate(40deg) translate(-1500px, 800px)",
+            top: "100%",
+            opacity: "0",
+          },
         }
       }
     },
