@@ -19,6 +19,10 @@ module.exports = {
         "text-focus-in": "text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both",
         "vibrate": "vibrate .4s ease 8s 15, gogo .2s ease 14s 40, santamove 22s linear 0s 1 forwards",  // keyframe-name | duration | easing-function | delay | iteration-count
         "modal-fade-in": "modal-fade-in .5s ease 0s 1",
+        "roll": "roll 5s linear infinite",
+        "roll2": "roll 5s linear 2s infinite",
+        "roll3": "roll 5s linear 4s infinite",
+        "roll4": "roll 5s linear 6s infinite",
       },
       keyframes: {
         "text-focus-in": {
@@ -85,6 +89,19 @@ module.exports = {
           },
           "100%": {
             opacity: "1",
+          }
+        },
+        "roll": {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "90%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "rotate(20deg)",
+            top: "100%",
+            opacity: "0",
           }
         }
       }
