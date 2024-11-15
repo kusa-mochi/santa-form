@@ -26,6 +26,7 @@ export default function NextPage() {
   const closeConfirmDialog = () => {
     setConfirmDialogDisplay("hidden")
   }
+
   return (
     <React.Fragment>
       <Head>
@@ -87,6 +88,7 @@ export default function NextPage() {
           <div className='text-[#fffafa] text-[14px] fixed top-[-5%] animate-roll4 [text-shadow:_54vw_-191px_2px,_27vw_-12px_0px,_79vw_-162px_1px,_80vw_-161px_8px,_91vw_-56px_1px,_11vw_-147px_3px,_85vw_-292px_8px,_18vw_-185px_7px,_74vw_-223px_2px,_97vw_-250px_5px,_72vw_-7px_0px,_33vw_-27px_1px,_37vw_-229px_6px,_6vw_-198px_2px,_74vw_-241px_1px,_76vw_-14px_1px,_20vw_-197px_3px,_67vw_-140px_0px,_23vw_-227px_4px,_59vw_-56px_9px,_46vw_-94px_2px,_93vw_-238px_5px,_11vw_-111px_4px,_9vw_-265px_1px,_21vw_-146px_1px,_65vw_-134px_1px,_81vw_-276px_6px,_49vw_-72px_9px,_46vw_-25px_9px,_62vw_-103px_2px,_57vw_-186px_5px,_33vw_-95px_7px,_9vw_-244px_2px,_6vw_-211px_5px,_91vw_-68px_2px,_36vw_-229px_4px,_84vw_-159px_7px,_39vw_-131px_8px,_52vw_-269px_6px,_17vw_-175px_8px,_89vw_-197px_9px,_76vw_-230px_3px,_37vw_-68px_8px,_67vw_-286px_4px,_59vw_-147px_8px,_44vw_-129px_0px,_84vw_-242px_5px,_78vw_-150px_10px,_96vw_-234px_9px,_38vw_-276px_4px,_30vw_-85px_8px,_63vw_-209px_1px,_7vw_-16px_3px,_98vw_-201px_4px,_90vw_-265px_1px,_84vw_-204px_2px,_91vw_-42px_2px,_60vw_-97px_3px,_92vw_-172px_2px,_65vw_-1px_3px,_51vw_-43px_7px,_74vw_-170px_1px,_12vw_-175px_9px,_73vw_-171px_8px,_27vw_-184px_6px,_74vw_-131px_2px,_81vw_-232px_2px,_92vw_-85px_9px,_98vw_-289px_8px,_16vw_-128px_7px,_80vw_-125px_6px,_29vw_-237px_8px,_74vw_-99px_9px,_91vw_-37px_3px,_35vw_-114px_4px,_37vw_-277px_9px,_36vw_-259px_7px,_76vw_-180px_2px,_21vw_-69px_3px,_50vw_-136px_2px,_71vw_-65px_5px,_58vw_-98px_5px,_41vw_-240px_1px,_90vw_-19px_2px,_82vw_-84px_6px,_57vw_-259px_3px,_94vw_-282px_3px,_18vw_-120px_1px,_69vw_-179px_3px,_28vw_-58px_3px,_56vw_-179px_2px,_71vw_-180px_7px,_72vw_-226px_1px,_39vw_-44px_3px,_9vw_-73px_6px,_50vw_-162px_2px,_65vw_-278px_7px,_58vw_-300px_6px,_31vw_-184px_7px,_90vw_-221px_1px]'>●</div>
         </div>
       </div>
+      <audio src='/sounds/bell.mp3' autoPlay></audio>
     </React.Fragment>
   )
 }
