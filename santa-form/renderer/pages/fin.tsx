@@ -74,20 +74,19 @@ export default function FinPage() {
         <title>さんたの　さいと　🎅🦌🦌🦌🦌</title>
       </Head>
       <div className="w-full flex flex-col flex-nowrap justify-start items-center">
-        <div className='w-2/3 mt-20 z-20'>
+        <div className='absolute top-0 left-[80%] mt-26'>
           <Image
-            className="ml-auto mr-auto mt-8 transform scale-x-[-1] animate-vibrate"
-            src="/images/christmas_santa_sori.png"
-            alt="わたしだよ"
+            src="/images/snow_house.png"
+            alt="さんたさんの　おうち"
             width={256}
             height={256}
           />
         </div>
-        <div>
+        <div className='w-2/3 mt-28'>
           <Image
-            className='absolute top-[11px] left-[80%] z-10'
-            src="/images/snow_house.png"
-            alt="さんたさんの　おうち"
+            className="ml-auto mr-auto transform scale-x-[-1] animate-vibrate"
+            src="/images/christmas_santa_sori.png"
+            alt="わたしだよ"
             width={256}
             height={256}
           />
