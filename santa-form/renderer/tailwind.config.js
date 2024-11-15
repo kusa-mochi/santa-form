@@ -20,13 +20,13 @@ module.exports = {
         "vibrate": "vibrate .4s ease 8s 15, gogo .2s ease 14s 40, santamove 22s linear 0s 1 forwards",  // keyframe-name | duration | easing-function | delay | iteration-count
         "modal-fade-in": "modal-fade-in .5s ease 0s 1",
         "roll": "roll 5s linear infinite",
-        "roll2": "roll 5s linear 2s infinite",
-        "roll3": "roll 5s linear 4s infinite",
-        "roll4": "roll 5s linear 6s infinite",
+        "roll2": "roll 5s linear 1.25s infinite",
+        "roll3": "roll 5s linear 2.5s infinite",
+        "roll4": "roll 5s linear 3.75s infinite",
         "fubuki": "fubuki 1s linear infinite",
-        "fubuki2": "fubuki 1s linear 0.3s infinite",
-        "fubuki3": "fubuki 1s linear 0.6s infinite",
-        "fubuki4": "fubuki 1s linear 1s infinite",
+        "fubuki2": "fubuki 1s linear 0.25s infinite",
+        "fubuki3": "fubuki 1s linear 0.5s infinite",
+        "fubuki4": "fubuki 1s linear 0.75s infinite",
       },
       keyframes: {
         "text-focus-in": {
@@ -110,14 +110,14 @@ module.exports = {
         },
         "fubuki": {
           "0%": {
-            transform: "rotate(0deg) translate(0px, 800px)",
+            transform: "rotate(0deg) translate(500px, 950px)",
           },
           "90%": {
             opacity: "1",
           },
           "100%": {
-            transform: "rotate(40deg) translate(-1500px, 800px)",
-            top: "100%",
+            transform: "rotate(20deg) translate(-1500px, 950px)",
+            // top: "100%",
             opacity: "0",
           },
         }
