@@ -1,6 +1,6 @@
-appId: com.example.nextron
-productName: My Nextron App
-copyright: Copyright © 2018 Yoshihide Shiono
+appId: net.slash-mochi.santa-form
+productName: Santa Form
+copyright: Copyright © 2024 kusa-mochi
 directories:
   output: dist
   buildResources: resources
