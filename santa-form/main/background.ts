@@ -3,6 +3,7 @@ import { app, ipcMain } from 'electron'
 import serve from 'electron-serve'
 import { createWindow } from './helpers'
 import fs from 'node:fs'
+import os from 'os'
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -48,7 +49,25 @@ ipcMain.on('message', async (event, arg) => {
 ipcMain.on("write-to-text-file", (event, content: string) => {
   const unixTimeNow: number = new Date().getTime() / 1000.0
   const fileName: string = `santa-form_${unixTimeNow}.txt`
-  fs.writeFile(`./${fileName}`, content, err => {
+
+  let saveFilePath: string = ""
+  const platform = os.platform()
+
+  // 実行環境で場合分け
+  switch (platform) {
+    case "win32":
+      console.log("platform: windows")
+      saveFilePath = `c:\\\\${fileName}`
+      break
+    case "linux":
+      console.log("platform: linux")
+      saveFilePath = `./${fileName}`
+      break
+    default:
+      break
+  }
+
+  fs.writeFile(saveFilePath, content, err => {
     if (err) {
       console.error("failed to write text to a file:", err.message)
     } else {
