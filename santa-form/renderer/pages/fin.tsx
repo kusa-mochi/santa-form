@@ -87,7 +87,7 @@ export default function FinPage() {
       <Head>
         <title>さんたの　さいと　🎅🦌🦌🦌🦌</title>
       </Head>
-      <div className="w-full flex flex-col flex-nowrap justify-start items-center">
+      <div className="w-full flex flex-col flex-nowrap justify-start items-center select-none">
         <div className='absolute top-0 left-[80%] mt-26'>
           <Image
             src="/images/snow_house.png"

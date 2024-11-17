@@ -32,7 +32,7 @@ export default function NextPage() {
       <Head>
         <title>さんたの　さいと　🎅🦌🦌🦌🦌</title>
       </Head>
-      <div className="w-full flex flex-col flex-nowrap justify-start items-center">
+      <div className="w-full flex flex-col flex-nowrap justify-start items-center select-none">
         <div>
           <Image
             className="ml-auto mr-auto mt-8"
