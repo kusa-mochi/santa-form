@@ -17,12 +17,12 @@ export default function HiraganaKeyboard(props: Props) {
     ]
     const smallCharRows: string[][] = [
         ["1","2","3","4","5","6","7","8","9","0"],
-        [null,null,"や",null,null,null,null,null,null,"ぁ"],
+        [null,null,"ゃ",null,null,null,null,null,null,"ぁ"],
         [null,null,null,null,null,null,null,null,null,"ぃ"],
-        [null,null,"ゆ",null,null,null,null,null,null,"ぅ"],
+        [null,null,"ゅ",null,null,null,null,null,null,"ぅ"],
         [null,null,null,null,null,null,null,null,null,"ぇ"],
-        [null,null,"よ",null,null,null,null,null,null,"ぉ"],
-        ["↑","゛","゜",null,null,null,null,null,null,null],
+        [null,null,"ょ",null,null,null,null,null,null,"ぉ"],
+        ["↑",null,null,null,null,null,null,null,null,null],
     ]
     const [isSmallChar, setIsSmallChar] = useState(false)
     const numCol: number = 10
@@ -33,22 +33,38 @@ export default function HiraganaKeyboard(props: Props) {
                 !isSmallChar &&
                 charRows.map((row, i) => {
                     return row.map((col, j) => {
-                        return (
-                            <div key={(numRow * i) + j}>
-                                <KeyboardButton onClick={props.onClick} label={col}/>
-                            </div>
-                        )
+                        if (col === "↑") {
+                            return (
+                                <div key={(numRow * i) + j}>
+                                    <KeyboardButton onClick={() => setIsSmallChar(!isSmallChar)} label={col}/>
+                                </div>
+                            )
+                        } else {
+                            return (
+                                <div key={(numRow * i) + j}>
+                                    <KeyboardButton onClick={props.onClick} label={col}/>
+                                </div>
+                            )
+                        }
                     })
                 })
             }{
                 isSmallChar &&
                 smallCharRows.map((row, i) => {
                     return row.map((col, j) => {
-                        return (
-                            <div key={(numRow * i) + j}>
-                                <KeyboardButton onClick={props.onClick} label={col}/>
-                            </div>
-                        )
+                        if (col === "↑") {
+                            return (
+                                <div key={(numRow * i) + j}>
+                                    <KeyboardButton onClick={() => setIsSmallChar(!isSmallChar)} label={col}/>
+                                </div>
+                            )
+                        } else {
+                            return (
+                                <div key={(numRow * i) + j}>
+                                    <KeyboardButton onClick={props.onClick} label={col}/>
+                                </div>
+                            )
+                        }
                     })
                 })
             }</div>
