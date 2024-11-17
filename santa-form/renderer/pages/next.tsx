@@ -46,17 +46,17 @@ export default function NextPage() {
           <p className='mt-12 mb-3 animate-text-focus-in'>きみが　ほしいものは　なにかな？</p>
           <p className='mb-8 animate-text-focus-in'>ひらがなで　かいて、「すすむ」ぼたんを　おしてね！</p>
         </div>
-        <div className='flex flex-row flex-wrap justify-center items-center content-center w-full sm:w-full md:w-9/10 lg:w-4/5 xl:w-2/3 2xl:w-1/2'>
-          <div className='bg-white text-gray-800 w-[calc(100%-100px)] h-14 text-4xl flex flex-row flex-wrap justify-start items-center content-center mb-8'>
+        <div className='flex flex-row flex-wrap justify-center items-center content-center w-full sm:w-full md:w-9/10 lg:w-4/5 xl:w-2/3 2xl:w-1/2 mb-8'>
+          <div className='bg-white text-gray-800 w-[calc(100%-100px)] h-14 text-4xl flex flex-row flex-wrap justify-start items-center content-center'>
             {inputText}
           </div>
-          <div className='flex flex-row flex-wrap justify-center items-center content-center ml-1'>
+          <div className='flex flex-row flex-wrap justify-center items-center content-center ml-2'>
             <button onClick={onBackspace}>
               <Image
                 src="/images/backspace.png"
                 alt="もじを１つけすよ"
-                width={32}
-                height={32}
+                width={56}
+                height={56}
               />
             </button>
           </div>
