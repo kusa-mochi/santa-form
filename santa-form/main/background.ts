@@ -57,7 +57,7 @@ ipcMain.on("write-to-text-file", (event, content: string) => {
   switch (platform) {
     case "win32":
       console.log("platform: windows")
-      saveFilePath = `c:\\\\${fileName}`
+      saveFilePath = `${process.env.APPDATA}\\..\\..\\Documents\\${fileName}`
       break
     case "linux":
       console.log("platform: linux")
